@@ -1,0 +1,24 @@
+Подробная информация об использовании оперативной 
+(JIT) отладки вместо данного диалогового 
+окна содержится в конце этого сообщения.
+
+************** Текст исключения **************
+System.InvalidOperationException: The model backing the 'SampleContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   в System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   в System.Data.Entity.Internal.InternalContext.<>c__DisplayClass66_0`1.<CreateInitializationAction>b__0()
+   в System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   в System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   в System.Data.Entity.Internal.LazyInternalContext.<>c.<InitializeDatabase>b__58_0(InternalContext c)
+   в System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   в System.Data.Entity.Internal.InternalContext.Initialize()
+   в System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   в System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   в System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   в System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   в System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   в System.Data.Entity.DbSet`1.Add(TEntity entity)
+   в ADO.NET.LAB9.CustomerManager.CustomerViewer.CustomerViewer_Load(Object sender, EventArgs e) в C:\Users\Александр\Desktop\ИТМО\07 - Технология ADO.NET\Practice\ITMO.ADO.NET\ADO.NET.LAB9.CustomerManager\CustomerViewer.cs:строка 91
+   в System.Windows.Forms.Form.OnLoad(EventArgs e)
+   в System.Windows.Forms.Form.OnCreateControl()
